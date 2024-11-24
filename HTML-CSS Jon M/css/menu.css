@@ -1,0 +1,244 @@
+/* Reset Margin and Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Container */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b2d42; /* Dark blue background */
+  color: #edf2f4; /* Light text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%; /* Full-width header */
+  padding: 0; /* No padding */
+}
+
+/* Logo Section */
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; /* Padding inside the logo container */
+}
+
+.logo-container img {
+  max-width: 50px; /* Adjusted for compact design */
+  height: auto;
+  margin-right: 10px; /* Small space between logo and text */
+}
+
+.logo-container h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  color: #edf2f4;
+  margin: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  gap: 20px; /* Space between links */
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px; /* Padding inside the navbar */
+  width: 100%;
+  justify-content: flex-end; /* Aligns links to the right */
+}
+
+.navbar a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #edf2f4; /* Light text color */
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #8d99ae; /* Muted blue hover effect */
+  color: #2b2d42; /* Dark text on hover */
+  border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative; /* Ensures dropdown items are positioned relative to the parent */
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positions below the parent link */
+  left: 0;
+  background-color: #edf2f4; /* Light background for dropdown */
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 5px 15px;
+}
+
+.dropdown-menu a {
+  font-size: 14px;
+  color: #2b2d42;
+  display: block;
+  padding: 5px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #8d99ae;
+  color: #edf2f4;
+  border-radius: 3px;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Full-width Navbar */
+.header {
+  flex-wrap: nowrap; /* Ensures the layout doesn't break */
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo-container {
+    justify-content: center;
+    margin-bottom: 10px; /* Adds space below logo on smaller screens */
+  }
+}
+
+
+/* Main Layout */
+.bd {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+  padding: 0 50px;
+  gap: 40px; /* Adds space between French and Italian menus */
+}
+
+/* Shared Styling for Menus */
+.french, .italian {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff; /* Adds background to menus */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.french h1, .italian h1 {
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #623131;
+}
+
+.french h2, .italian h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.french p, .italian p {
+  font-size: 16px;
+  color: #5a5a5a;
+  margin-bottom: 15px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #2b2d42; /* Dark blue background */
+  color: #edf2f4; /* Light text color */
+  padding: 50px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the content */
+}
+
+/* Footer Section */
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #8d99ae; /* Muted blue for section headings */
+}
+
+.footer-section p,
+.footer-section ul li {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #edf2f4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #8d99ae; /* Muted blue hover effect */
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #8d99ae;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #edf2f4;
+}
